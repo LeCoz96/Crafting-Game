@@ -1,24 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMotor : MonoBehaviour
 {
     private CharacterController _controler;
     private Vector3 _playerVelocity;
-    [SerializeField] private float _speed = 5.0f;
+    [SerializeField] private float _speed;
 
     private bool _isGrounded;
-    [SerializeField] private float _gravity = -9.8f;
-    [SerializeField] private float _jumpHeight = 3.0f;
+    [SerializeField] private float _gravity;
+    [SerializeField] private float _jumpHeight;
 
-    // Start is called before the first frame update
     void Start()
     {
         _controler = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         _isGrounded = _controler.isGrounded;
@@ -32,7 +28,7 @@ public class PlayerMotor : MonoBehaviour
 
         _controler.Move(transform.TransformDirection(moveDirection) * _speed * Time.deltaTime);
 
-        _playerVelocity.y += _gravity * Time.deltaTime;
+        _playerVelocity.y += -_gravity * Time.deltaTime;
 
         if (_isGrounded && _playerVelocity.y < 0.0f)
         {
@@ -46,7 +42,7 @@ public class PlayerMotor : MonoBehaviour
     {
         if (_isGrounded)
         {
-            _playerVelocity.y = Mathf.Sqrt(_jumpHeight * -3.0f * _gravity);
+            _playerVelocity.y = Mathf.Sqrt(_jumpHeight * -3.0f * -_gravity);
         }
     }
 }
