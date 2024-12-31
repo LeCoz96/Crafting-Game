@@ -296,6 +296,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &387156237 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4514061711167824892, guid: 36793bd5e9dc708448e24ccd8536b43c, type: 3}
+  m_PrefabInstance: {fileID: 1036931076}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &387156238 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4514061711167824893, guid: 36793bd5e9dc708448e24ccd8536b43c, type: 3}
@@ -407,6 +412,11 @@ MonoBehaviour:
   m_Spacing: {x: 8, y: 0}
   m_Constraint: 2
   m_ConstraintCount: 1
+--- !u!1 &675172617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4514061711167824892, guid: 36793bd5e9dc708448e24ccd8536b43c, type: 3}
+  m_PrefabInstance: {fileID: 2142696864}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &675172618 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4514061711167824893, guid: 36793bd5e9dc708448e24ccd8536b43c, type: 3}
@@ -603,10 +613,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &929685470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4514061711167824892, guid: 36793bd5e9dc708448e24ccd8536b43c, type: 3}
+  m_PrefabInstance: {fileID: 1717105390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &929685471 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4514061711167824893, guid: 36793bd5e9dc708448e24ccd8536b43c, type: 3}
   m_PrefabInstance: {fileID: 1717105390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &969893043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4514061711167824892, guid: 36793bd5e9dc708448e24ccd8536b43c, type: 3}
+  m_PrefabInstance: {fileID: 1115707447}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &969893044 stripped
 RectTransform:
@@ -1171,7 +1191,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 259109d8dc411044f87fa07b48dbeb67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 1340663416}
+  _itemSlots:
+  - {fileID: 1340663416}
+  - {fileID: 675172617}
+  - {fileID: 969893043}
+  - {fileID: 929685470}
+  - {fileID: 387156237}
 --- !u!1 &1553970425
 GameObject:
   m_ObjectHideFlags: 0
