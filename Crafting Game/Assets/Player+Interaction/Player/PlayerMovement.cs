@@ -1,8 +1,10 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMotor : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    private CharacterController _controler;
+    private CharacterController _controller;
     private Vector3 _playerVelocity;
     [SerializeField] private float _speed;
 
@@ -12,12 +14,12 @@ public class PlayerMotor : MonoBehaviour
 
     void Start()
     {
-        _controler = GetComponent<CharacterController>();
+        _controller = GetComponent<CharacterController>();
     }
 
     void Update()
     {
-        _isGrounded = _controler.isGrounded;
+        _isGrounded = _controller.isGrounded;
     }
 
     public void ProcessMove(Vector2 input)
@@ -26,7 +28,7 @@ public class PlayerMotor : MonoBehaviour
         moveDirection.x = input.x;
         moveDirection.z = input.y;
 
-        _controler.Move(transform.TransformDirection(moveDirection) * _speed * Time.deltaTime);
+        _controller.Move(transform.TransformDirection(moveDirection) * _speed * Time.deltaTime);
 
         _playerVelocity.y += -_gravity * Time.deltaTime;
 
@@ -35,7 +37,7 @@ public class PlayerMotor : MonoBehaviour
             _playerVelocity.y = -2.0f;
         }
 
-        _controler.Move(_playerVelocity * Time.deltaTime);
+        _controller.Move(_playerVelocity * Time.deltaTime);
     }
 
     public void Jump()

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4582543723445138422}
   - component: {fileID: 6745211804536759052}
   - component: {fileID: 5910128551749285993}
-  - component: {fileID: 752087763281408585}
+  - component: {fileID: 9097748834861720926}
   - component: {fileID: 2146821665681208777}
   m_Layer: 0
   m_Name: Player
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78c1f0f38d2bce4280c7305a7a51f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &752087763281408585
+--- !u!114 &9097748834861720926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,12 +127,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4582543723445138416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 884dc666d9e13224085a4bec01881e6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 54465d89a87559d44b99f4d4731a87ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
   _gravity: 9.8
-  _jumpHeight: 3
+  _jumpHeight: 1
 --- !u!114 &2146821665681208777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +145,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b96cd0c8064c6a844b6dd48b38d9b83d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _camera: {fileID: 4582543723613759584}
+  _xSensitivity: 30
+  _ySensitivity: 30
+  _viewAngle: 75
 --- !u!1 &4582543723613759586
 GameObject:
   m_ObjectHideFlags: 0
