@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
@@ -13,11 +10,13 @@ public class PlayerInteract : MonoBehaviour
 
     private PlayerUI _playerUI;
     private InputManager _inputManager;
+    private PlayerInventory _playerInventory;
 
     void Start()
     {
         _playerUI = GetComponent<PlayerUI>();
         _inputManager = GetComponent<InputManager>();
+        _playerInventory = GetComponent<PlayerInventory>();
     }
 
     void Update()
@@ -25,7 +24,7 @@ public class PlayerInteract : MonoBehaviour
         _playerUI.UpdateMessage(string.Empty);
 
         Ray ray = new Ray(_camera.transform.position, _camera.transform.forward);
-        Debug.DrawRay(ray.origin, ray.direction * _distance);
+        //Debug.DrawRay(ray.origin, ray.direction * _distance);
 
         RaycastHit hit;
 
@@ -40,6 +39,10 @@ public class PlayerInteract : MonoBehaviour
                 if (_inputManager._onFoot.Interact.triggered)
                 {
                     interactable.BaseInteract();
+
+                    _playerUI.UpdateInventory(interactable.GetIcon(), interactable.GetQuantity());
+
+                    _playerInventory.AddItem(interactable.GetQuantity(), interactable.GetIcon());
                 }
             }
         }
