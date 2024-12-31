@@ -822,7 +822,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _message: '[E] Collect Wood'
   _quantity: 1
-  _icon: {fileID: 21300000, guid: 224bf0570dbee2046813e7e1d7785169, type: 3}
+  _icon: {fileID: 21300000, guid: f9674e601f5b7f24198bad3df9177da8, type: 3}
+  _type: 0
 --- !u!1 &1064861361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,6 +1019,7 @@ GameObject:
   - component: {fileID: 1418249107}
   - component: {fileID: 1418249106}
   - component: {fileID: 1418249105}
+  - component: {fileID: 1418249109}
   m_Layer: 6
   m_Name: Cloth
   m_TagString: Untagged
@@ -1103,6 +1105,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1418249109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418249104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17cb72ba37097d14d829131490b7b77e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _message: '[E] Collect Cloth'
+  _quantity: 1
+  _icon: {fileID: 21300000, guid: bbeea684d51c7db45921c9265058ef57, type: 3}
+  _type: 1
 --- !u!1 &1492407184
 GameObject:
   m_ObjectHideFlags: 0
