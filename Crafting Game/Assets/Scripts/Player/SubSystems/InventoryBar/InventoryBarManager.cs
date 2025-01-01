@@ -14,4 +14,9 @@ public class InventoryBarManager : MonoBehaviour
 
         ++value;
     }
+
+    //private bool ItemAlreadyExists(Sprite icon)
+    //{
+
+    //}
 }
