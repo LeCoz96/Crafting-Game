@@ -840,10 +840,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a4aaa932ae3014b8573bbfc2135420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _interactManager: {fileID: 11400000, guid: ce1a72ffdc044d9488d0bf161b91c9a4, type: 2}
   _message: '[E] Collect Wood'
-  _quantity: 1
-  _icon: {fileID: 21300000, guid: f9674e601f5b7f24198bad3df9177da8, type: 3}
-  Type: 0
 --- !u!1 &1064861361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,10 +1135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a4aaa932ae3014b8573bbfc2135420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _interactManager: {fileID: 11400000, guid: ce1a72ffdc044d9488d0bf161b91c9a4, type: 2}
   _message: '[E] Collect Cloth'
-  _quantity: 1
-  _icon: {fileID: 21300000, guid: bbeea684d51c7db45921c9265058ef57, type: 3}
-  Type: 1
 --- !u!1 &1492407184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,10 +1303,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a4aaa932ae3014b8573bbfc2135420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _interactManager: {fileID: 11400000, guid: ce1a72ffdc044d9488d0bf161b91c9a4, type: 2}
   _message: '[E] Collect Tape'
-  _quantity: 1
-  _icon: {fileID: 21300000, guid: 5e44c68c8eb5cb949bd903a893b41760, type: 3}
-  Type: 2
 --- !u!1 &1691048856
 GameObject:
   m_ObjectHideFlags: 0

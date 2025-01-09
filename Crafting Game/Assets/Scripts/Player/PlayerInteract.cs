@@ -26,9 +26,9 @@ public class PlayerInteract : MonoBehaviour
 
         RaycastHit hit;
 
-        if(Physics.Raycast(ray, out hit, _distance, _layerMask))
+        if (Physics.Raycast(ray, out hit, _distance, _layerMask))
         {
-            if(hit.collider.GetComponent<Interactable>() != null)
+            if (hit.collider.GetComponent<Interactable>() != null)
             {
                 Interactable interactable = hit.collider.GetComponent<Interactable>();
 
@@ -36,10 +36,17 @@ public class PlayerInteract : MonoBehaviour
 
                 if (_inputManager._onFoot.Interact.triggered)
                 {
-                    interactable.Interact();
+                    if (_playerInventory.CanCollectItem())
+                    {
+                        interactable.Interact();
 
-                    //_playerUI.UpdateInventory(interactable.GetIcon(), interactable.GetQuantity());
-                    _playerInventory.AddItem(interactable.GetIcon(), interactable.GetQuantity());
+                        //_playerUI.UpdateInventory(interactable.GetIcon(), interactable.GetQuantity());
+                        //_playerInventory.AddItem(interactable.GetIcon(), interactable.GetQuantity(), interactable.getitem);
+                    }
+                    else
+                    {
+                        _playerUI.UpdateMessage(_playerInventory.GetCannotCollectText());
+                    }
                 }
             }
         }
